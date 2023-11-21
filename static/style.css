@@ -4,16 +4,17 @@ body {
 }
 
 .header {
-    text-align: center;
-    font-size: 2em;
-    font-weight: bold;
+    background-color: transparent;
     color: white;
-    text-shadow: 2px 2px 4px #000000;
+    padding: 150px;
+    text-align: center;
 }
 
 .slogan {
-    text-align: center;
+    background-color: transparent;
     color: white;
+    padding: 150px;
+    text-align: center;
 }
 
 .login-container {
@@ -37,7 +38,8 @@ body {
 }
 
 .content {
-    margin-top: 20px;
+    background-color: transparent;
+    color: white;
 }
 
 textarea {
@@ -59,14 +61,8 @@ button:hover {
     background-color: #45a049;
 }
 
-.column {
-    margin-top: 20px;
-}
-
 .user-story {
-    background-color: #f9f9f9;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    color: Black;
+    font-size: 37;
 }
