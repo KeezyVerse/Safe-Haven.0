@@ -2,7 +2,7 @@ from flask import Flask, render_template, url_for, request, redirect
 
 app = Flask(__name__)
 
-app.secret_key = 'secret key'
+app.secret_key = 'secret key
 
 users = {'Jimmy': 'Drool'}
 
