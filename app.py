@@ -4,21 +4,31 @@ app = Flask(__name__)
 
 app.secret_key = 'secret key'
 
-users = {'Jimmy': 'Drool'}
+#auth = {"username": 'Jimmy',"password": 'Drool'}
+
+@app.route('/')
+def index():
+    return render_template('login.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    if request.method == 'POST':
-        user = request.form['username']
-        password = request.form['password']
-        if user in users and users[user] == password:
-            return redirect(url_for('home'))
+    user = request.form['username']
+    passcode = request.form['password']
+    print(user,passcode)
+    if (user == "Jimmy") and (passcode == "Drool"):
+        return redirect("/home")
+    else:
         return 'Login unsuccessful'
-    return render_template('login.html')
 
 @app.route('/home')
 def home():
-    return render_template('home.html')
+    return render_template('homepage.html')
+
+@app.route('/submit_comment', methods=['POST'])
+def submit_comment():
+    
+    comment_content = request.form.get('comment_content')
+    return redirect(url_for('home'))
 
 if __name__ == '__main__':
     app.run(debug=True)
